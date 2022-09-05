@@ -1,8 +1,9 @@
 <script>
   import Review from './UI/review/review.svelte';
 	import { Tabs, TabList, TabPanel, Tab } from './UI/Tab/tabs.js';
+  import Collapse from './UI/Collapse/Collapse.svelte';
 </script>
-import Collapse from './UI/Collapse/Collapse.svelte';
+
 <div>
   <Tabs>
     <TabList>
@@ -25,4 +26,3 @@ import Collapse from './UI/Collapse/Collapse.svelte';
 
 <Collapse sectionName={"Section 1"} sectionContent={"Section 1 content"} />
 <Collapse sectionName={"Section 2"} sectionContent={"Section 2 content"} />
-<p>test</p>
