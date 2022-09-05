@@ -3,14 +3,30 @@
   export let rating;
   export let comments;
   export let src;
-  // import starts from fontawesome
+  import "./Review.css";
+  import FaRegStar from "svelte-icons/fa/FaRegStar.svelte";
+  import FaStar from "svelte-icons/fa/FaStar.svelte";
 </script>
 
-<h1>{name}</h1>
-<!-- for i in range of rating -->
-{#each Array(rating) as _, i}
-  <!-- display a star -->
-  <span class="fa fa-star checked" />
-{/each}
-<p>{comments}</p>
-<img {src} alt={name} />
+<div class="grid-containter">
+  <div class="col-left">
+    <img {src} alt={name} />
+  </div>
+  <div class="col-right">
+    <div class="col-right-stars">
+      {#each Array(5) as _, i}
+        {#if i < rating}
+          <FaStar />
+        {:else}
+          <FaRegStar />
+        {/if}
+      {/each}
+    </div>
+    <div class="col-right-name">
+      <strong>{name}</strong>
+    </div>
+    <div class="col-right-comments">
+      {comments}
+    </div>
+  </div>
+</div>
