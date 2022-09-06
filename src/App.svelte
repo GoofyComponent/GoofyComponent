@@ -1,5 +1,5 @@
 <script>
-  import Review from "./UI/review/Review.svelte";
+  import Review from "./UI/Review/Review.svelte";
   import { Tabs, TabList, TabPanel, Tab } from "./UI/Tab/tabs.js";
   import Collapse from "./UI/Collapse/Collapse.svelte";
   import Calc from "./UI/Calc/Calc.svelte";
