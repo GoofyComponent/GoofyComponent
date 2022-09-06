@@ -3,7 +3,7 @@
   export let rating;
   export let comments;
   export let src;
-  import "./Review.css";
+  // import "./Review.css";
   import FaRegStar from "svelte-icons/fa/FaRegStar.svelte";
   import FaStar from "svelte-icons/fa/FaStar.svelte";
 </script>
