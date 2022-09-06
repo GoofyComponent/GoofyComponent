@@ -2,6 +2,7 @@
   import Review from './UI/review/review.svelte';
 	import { Tabs, TabList, TabPanel, Tab } from './UI/Tab/tabs.js';
   import Collapse from './UI/Collapse/Collapse.svelte';
+  import AlertModal from './UI/AlertModal/AlertModal.svelte';
 </script>
 
 <div>
@@ -26,3 +27,7 @@
 
 <Collapse sectionName={"Section 1"} sectionContent={"Section 1 content"} />
 <Collapse sectionName={"Section 2"} sectionContent={"Section 2 content"} />
+
+
+<AlertModal btn={true} confirmMsg={"J'execute"} confirmAction={()=>{console.log("pain")}} rejectAction={()=>{alert("salut")}} />
+  
