@@ -1,8 +1,19 @@
 <script>
   import AlertModal from "./UI/AlertModal/AlertModal.svelte";
   import Collapse from "./UI/Collapse/Collapse.svelte";
+  import DiGithubBadge from "svelte-icons/di/DiGithubBadge.svelte";
   let btnTrigger = false;
 </script>
+
+<section id="linksBar">
+  <div
+    on:click={() => {
+      window.open("https://github.com/GoofyComponent/GoofyComponent");
+    }}
+  >
+    <DiGithubBadge />
+  </div>
+</section>
 
 <header>
   <div class="text">
