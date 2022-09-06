@@ -1,5 +1,6 @@
 <script>
-  import DiGithubBadge from "svelte-icons/di/DiGithubBadge.svelte";
+  import FaGithub from "svelte-icons/fa/FaGithub.svelte";
+  import FaLinkedin from "svelte-icons/fa/FaLinkedin.svelte";
 
   import AlertModal from "./UI/AlertModal/AlertModal.svelte";
   import Collapse from "./UI/Collapse/Collapse.svelte";
@@ -12,6 +13,8 @@
   import Tab from "./UI/Tab/Tab.svelte";
   import TabPanel from "./UI/Tab/TabPanel.svelte";
   import Tabs from "./UI/Tab/Tabs.svelte";
+  import Todo from "./UI/Todo/Todo.svelte";
+
   let btnTrigger = false;
 </script>
 
@@ -21,7 +24,7 @@
       window.open("https://github.com/GoofyComponent/GoofyComponent");
     }}
   >
-    <DiGithubBadge />
+    <FaGithub />
   </div>
 </section>
 
@@ -100,6 +103,14 @@
       }}
     >
       <p>Checkbox</p>
+    </div>
+    <div
+      on:click={(e) => {
+        e.preventDefault();
+        document.getElementById("todo").scrollIntoView();
+      }}
+    >
+      <p>ToDo</p>
     </div>
   </nav>
 
@@ -284,4 +295,34 @@
       <Check sentenceA={"Parfait !!!"} sentenceB={"Veuillez cocher la case "} />
     </div>
   </div>
+  <div class="displayCompoContain" id="todo">
+    <div class="text">
+      <h4>ToDo</h4>
+      <p>Utilisation</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
+        atque error, quos corrupti enim qui deserunt veniam perferendis
+        exercitationem sint asperiores, blanditiis accusantium iusto saepe
+        repudiandae eaque officia dicta itaque.
+      </p>
+    </div>
+
+    <div class="compoZone">
+      <Todo />
+    </div>
+  </div>
 </section>
+
+<footer>
+  <p>{new Date().getFullYear()} - GoofyComponentTeam</p>
+  <div>
+    <div><FaLinkedin /></div>
+    <div
+      on:click={() => {
+        window.open("https://github.com/GoofyComponent/GoofyComponent");
+      }}
+    >
+      <FaGithub />
+    </div>
+  </div>
+</footer>
