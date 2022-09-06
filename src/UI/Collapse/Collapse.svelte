@@ -1,5 +1,4 @@
 <script>
-    import "./Collapse.css";
     import FaAngleDown from 'svelte-icons/fa/FaAngleDown.svelte';
     export let sectionName;
     export let sectionContent;
