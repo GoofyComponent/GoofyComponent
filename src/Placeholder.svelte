@@ -16,6 +16,7 @@
   import Todo from "./UI/Todo/Todo.svelte";
 
   let btnTrigger = false;
+  let demoColor = "#006BD7";
 </script>
 
 <section id="linksBar">
@@ -259,8 +260,8 @@
       </p>
     </div>
 
-    <div class="compoZone">
-      <Color />
+    <div class="compoZone" style={"background-color:" + demoColor}>
+      <Color startColor={demoColor} bind:hexaVal={demoColor} />
     </div>
   </div>
   <div class="displayCompoContain" id="textinput">

@@ -95,6 +95,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+    color: black;
   }
   .calc-display {
     width: 100%;
