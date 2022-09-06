@@ -19,7 +19,7 @@
 	}
 	
 	.selected {
-		border-bottom: 2px solid teal;
+		border-bottom: 2px solid rgb(0, 70, 128);;
 		color: #333;
 	}
 </style>
