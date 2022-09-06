@@ -5,7 +5,7 @@
   import AlertModal from "./UI/AlertModal/AlertModal.svelte";
   import Check from "./UI/checkBox/Check.svelte";
   import InputText from "./UI/inputText/InputText.svelte";
-
+  import Calc from "./UI/Calc/Calc.svelte";
   let btnTrigger = false;
 </script>
 
@@ -14,11 +14,8 @@
     <TabList>
       <Tab>Review</Tab>
       <Tab>Collapse</Tab>
-<<<<<<< HEAD
       <Tab>luca</Tab>
-=======
       <Tab>Calc</Tab>
->>>>>>> 61fd1979fe656014b7cd5aa5746b14c35de64561
     </TabList>
     <TabPanel>
       <Review
@@ -72,6 +69,9 @@
         sentenceB={" veuillez cocher la case "}
       />
       <InputText placeholder={"entrez votre nom"} />
+    </TabPanel>
+    <TabPanel>
+      <Calc />
     </TabPanel>
   </Tabs>
 </div>
