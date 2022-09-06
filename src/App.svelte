@@ -1,33 +1,65 @@
 <script>
-  import Review from './UI/review/review.svelte';
-	import { Tabs, TabList, TabPanel, Tab } from './UI/Tab/tabs.js';
-  import Collapse from './UI/Collapse/Collapse.svelte';
-  import AlertModal from './UI/AlertModal/AlertModal.svelte';
+  import Review from "./UI/review/Review.svelte";
+  import { Tabs, TabList, TabPanel, Tab } from "./UI/Tab/tabs.js";
+  import Collapse from "./UI/Collapse/Collapse.svelte";
+  import AlertModal from "./UI/AlertModal/AlertModal.svelte";
+
+  let btnTrigger = false;
 </script>
 
 <div>
   <Tabs>
     <TabList>
-      <Tab>
-        Review
-      </Tab>
-      <Tab>
-        Collapse
-      </Tab>
+      <Tab>Review</Tab>
+      <Tab>Collapse</Tab>
     </TabList>
     <TabPanel>
-      <Review rating="45" />
+      <Review
+        name={"Jean-Louis"}
+        rating={4}
+        src="/Louis.jpeg"
+        comments={"Le Restaurant sert un très bon Ricard. Le service est très bon. Le cadre est très bon. Le prix est très bon. Et la serveuse..."}
+      />
+      <Review
+        name={"Mélanie"}
+        rating={2}
+        src="/melanie.jpeg"
+        comments={"Le service été deplorable il n'yavai pa de steak frite. Jai mis deux étoile pour la salade"}
+      />
     </TabPanel>
     <TabPanel>
-      ANTOINE
+      <Collapse
+        sectionName={"Section 1"}
+        sectionContent={"Section 1 content"}
+      />
+      <Collapse
+        sectionName={"Section 2"}
+        sectionContent={"Section 2 content"}
+      />
+      <button
+        on:click={() => {
+          btnTrigger = !btnTrigger;
+        }}>Lancer la modal</button
+      >
+      {#if btnTrigger}
+        <AlertModal
+          btn={true}
+          confirmMsg={"Acceptation"}
+          rejectMsg={"fermer le modal"}
+          confirmAction={() => {
+            {
+              btnTrigger = !btnTrigger;
+            }
+          }}
+          rejectAction={() => {
+            {
+              btnTrigger = !btnTrigger;
+            }
+          }}
+        />
+      {/if}
     </TabPanel>
   </Tabs>
 </div>
 
-
-<Collapse sectionName={"Section 1"} sectionContent={"Section 1 content"} />
-<Collapse sectionName={"Section 2"} sectionContent={"Section 2 content"} />
-
-
-<AlertModal btn={true} confirmMsg={"J'execute"} confirmAction={()=>{console.log("pain")}} rejectAction={()=>{alert("salut")}} />
-  
+<!-- Adrien Review componnent -->
