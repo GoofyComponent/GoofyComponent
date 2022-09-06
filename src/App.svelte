@@ -61,5 +61,8 @@
         />
       {/if}
     </TabPanel>
+    <TabPanel>
+      <Calc />
+    </TabPanel>
   </Tabs>
 </div>
