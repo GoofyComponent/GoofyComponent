@@ -1,7 +1,14 @@
 <script>
-  import Review from "./UI/Review/Review.svelte";
+  import Review from "./UI/review/Review.svelte";
   import { Tabs, TabList, TabPanel, Tab } from "./UI/Tab/tabs.js";
   import Collapse from "./UI/Collapse/Collapse.svelte";
+  import AlertModal from "./UI/AlertModal/AlertModal.svelte";
+  import Check from "./UI/checkBox/Check.svelte";
+  import InputText from "./UI/inputText/InputText.svelte";
+  import Calc from "./UI/Calc/Calc.svelte";
+  import Color from "./UI/Color/Color.svelte";
+
+  let btnTrigger = false;
 </script>
 
 <div>
@@ -9,6 +16,9 @@
     <TabList>
       <Tab>Review</Tab>
       <Tab>Collapse</Tab>
+      <Tab>luca</Tab>
+      <Tab>Calc</Tab>
+      <Tab>Color</Tab>
     </TabList>
     <TabPanel>
       <Review
@@ -24,11 +34,50 @@
         comments={"Le service été deplorable il n'yavai pa de steak frite. Jai mis deux étoile pour la salade"}
       />
     </TabPanel>
-    <TabPanel>ANTOINE</TabPanel>
+    <TabPanel>
+      <Collapse
+        sectionName={"Section 1"}
+        sectionContent={"Section 1 content"}
+      />
+      <Collapse
+        sectionName={"Section 2"}
+        sectionContent={"Section 2 content"}
+      />
+      <button
+        on:click={() => {
+          btnTrigger = !btnTrigger;
+        }}>Lancer la modal</button
+      >
+      {#if btnTrigger}
+        <AlertModal
+          btn={true}
+          confirmMsg={"Acceptation"}
+          rejectMsg={"fermer le modal"}
+          confirmAction={() => {
+            {
+              btnTrigger = !btnTrigger;
+            }
+          }}
+          rejectAction={() => {
+            {
+              btnTrigger = !btnTrigger;
+            }
+          }}
+        />
+      {/if}
+    </TabPanel>
+    <TabPanel>
+      <Check
+        sentenceA={" Parfait !!!  "}
+        sentenceB={" veuillez cocher la case "}
+      />
+      <InputText placeholder={"entrez votre nom"} />
+    </TabPanel>
+    <TabPanel>
+      <Calc />
+    </TabPanel>
+    <TabPanel>
+      <Color />
+    </TabPanel>
   </Tabs>
 </div>
-
-<Collapse sectionName={"Section 1"} sectionContent={"Section 1 content"} />
-<Collapse sectionName={"Section 2"} sectionContent={"Section 2 content"} />
-
-<!-- Adrien Review componnent -->
