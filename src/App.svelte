@@ -6,6 +6,8 @@
   import Check from "./UI/checkBox/Check.svelte";
   import InputText from "./UI/inputText/InputText.svelte";
   import Calc from "./UI/Calc/Calc.svelte";
+  import Color from "./UI/Color/Color.svelte";
+
   let btnTrigger = false;
 </script>
 
@@ -16,6 +18,7 @@
       <Tab>Collapse</Tab>
       <Tab>luca</Tab>
       <Tab>Calc</Tab>
+      <Tab>Color</Tab>
     </TabList>
     <TabPanel>
       <Review
@@ -72,6 +75,9 @@
     </TabPanel>
     <TabPanel>
       <Calc />
+    </TabPanel>
+    <TabPanel>
+      <Color />
     </TabPanel>
   </Tabs>
 </div>
