@@ -1,6 +1,6 @@
 <script>
   import Placeholder from "./Placeholder.svelte";
-  import Review from "../Review.svelte";
+  import Review from "./UI/Review/Review.svelte";
   import { Tabs, TabList, TabPanel, Tab } from "./UI/Tab/tabs.js";
   import Collapse from "./UI/Collapse/Collapse.svelte";
   import AlertModal from "./UI/AlertModal/AlertModal.svelte";
