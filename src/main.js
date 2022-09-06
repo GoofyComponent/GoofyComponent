@@ -1,4 +1,5 @@
 import "./app.css";
+import "./ui/Review/Review.css";
 // @ts-ignore
 import App from "./App.svelte";
 

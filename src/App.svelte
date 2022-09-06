@@ -14,7 +14,11 @@
     <TabList>
       <Tab>Review</Tab>
       <Tab>Collapse</Tab>
+<<<<<<< HEAD
       <Tab>luca</Tab>
+=======
+      <Tab>Calc</Tab>
+>>>>>>> 61fd1979fe656014b7cd5aa5746b14c35de64561
     </TabList>
     <TabPanel>
       <Review
@@ -71,5 +75,3 @@
     </TabPanel>
   </Tabs>
 </div>
-
-<!-- Adrien Review componnent -->
