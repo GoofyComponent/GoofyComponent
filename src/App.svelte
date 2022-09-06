@@ -2,9 +2,10 @@
   import Review from "./UI/review/Review.svelte";
   import { Tabs, TabList, TabPanel, Tab } from "./UI/Tab/tabs.js";
   import Collapse from "./UI/Collapse/Collapse.svelte";
-  import Calc from "./UI/Calc/Calc.svelte";
   import AlertModal from "./UI/AlertModal/AlertModal.svelte";
-
+  import Check from "./UI/checkBox/Check.svelte";
+  import InputText from "./UI/inputText/InputText.svelte";
+  import Calc from "./UI/Calc/Calc.svelte";
   let btnTrigger = false;
 </script>
 
@@ -13,6 +14,7 @@
     <TabList>
       <Tab>Review</Tab>
       <Tab>Collapse</Tab>
+      <Tab>luca</Tab>
       <Tab>Calc</Tab>
     </TabList>
     <TabPanel>
@@ -60,6 +62,16 @@
           }}
         />
       {/if}
+    </TabPanel>
+    <TabPanel>
+      <Check
+        sentenceA={" Parfait !!!  "}
+        sentenceB={" veuillez cocher la case "}
+      />
+      <InputText placeholder={"entrez votre nom"} />
+    </TabPanel>
+    <TabPanel>
+      <Calc />
     </TabPanel>
   </Tabs>
 </div>
