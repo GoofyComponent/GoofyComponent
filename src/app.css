@@ -56,6 +56,7 @@ header {
 
 header > .text {
   margin: 1em;
+  margin-left: 5em;
 }
 
 header > .text > h1 {
@@ -75,10 +76,10 @@ header > .text > h3 {
 }
 
 header > .icon {
-  position: sticky;
+  position: absolute;
   z-index: 2;
   left: 60%;
-  top: 20%;
+  top: 25%;
 }
 
 header > .icon > .circle {
@@ -131,7 +132,7 @@ header > .icon > img {
 }
 
 .displayCompoContain {
-  height: 35vh;
+  min-height: 35vh;
   display: flex;
   justify-content: space-around;
   padding: 1em 2em;
@@ -147,11 +148,13 @@ header > .icon > img {
 
 .displayCompoContain > .compoZone {
   width: 55%;
+  height: auto;
   background-color: #006bd7;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 2em;
+  padding: 1em 1em;
 }
 .displayCompoContain > .compoZone > .alertModalBtn {
   font-size: 1.4em;
