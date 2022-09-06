@@ -4,8 +4,8 @@
   export let disabled = false;
   export let showPlaceholder = true;
 
-
   let placeholderStyle = "";
+  let name = "";
 
   if (!showPlaceholder) {
     placeholderStyle = "0px auto";
@@ -14,20 +14,43 @@
   }
 </script>
 
+<div class="q-input" style="grid-template-rows: {placeholderStyle};">
+  {#if showPlaceholder}
+    <span class="title">{placeholder}</span>
+  {/if}
+  <label class="field a-field a-field_a1">
+    <input bind:value={name} class="field__input a-field__input" />
+  </label>
+  <h3>Hello {name || "Stranger "} !</h3>
+</div>
+
 <style>
   .q-input {
     display: grid;
+    border-radius: 10px;
+    width: 30%;
+    border: solid;
+    margin: 10px;
+    padding: 10px;
+    grid-template-rows: 15px auto;
+    box-shadow: 12px 12px 2px 1px rgb(0 0 255 / 20%);
     /* max-width: 200px; */
   }
 
   .title {
-    font-size: 12px;
-    opacity: 0,5;
+    font-size: 16px;
+    opacity: 0.7;
     padding-left: 5px;
     justify-self: left;
   }
   .field {
     --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
+  }
+
+  h3 {
+    text-align: center;
+    font-style: oblique;
+    font-weight: bold;
   }
 
   .field__input {
@@ -99,15 +122,6 @@
 
   .field {
     --fieldBorderColor: #d1c4e9;
-    --fieldBorderColorActive: #ff8204;
+    --fieldBorderColorActive: #26325b;
   }
 </style>
-
-<div class="q-input" style="grid-template-rows: {placeholderStyle};">
-  {#if showPlaceholder}
-    <span class="title">{placeholder}</span>
-  {/if}
-  <label class="field a-field a-field_a1">
-    <input class="field__input a-field__input" {disabled} bind:value />
-  </label>
-</div>
