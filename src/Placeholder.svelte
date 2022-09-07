@@ -14,8 +14,10 @@
   import TabPanel from "./UI/Tab/TabPanel.svelte";
   import Tabs from "./UI/Tab/Tabs.svelte";
   import Todo from "./UI/Todo/Todo.svelte";
+  import CodeSpace from "./UI/CodeSpace/CodeSpace.svelte";
 
   let btnTrigger = false;
+  let linkedinTrigger = false;
   let demoColor = "#006BD7";
   let demoInput = "";
   let checkDemo = false;
@@ -126,14 +128,10 @@
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>
-            Comment on l'utilise ? - AlertModal
-          </p>
+          <p>Comment on l'utilise ? - AlertModal</p>
         </TabPanel>
         <TabPanel>
-          <p>
-            Ceci est un code
-          </p>
+          <p>Ceci est un code</p>
         </TabPanel>
       </Tabs>
     </div>
@@ -175,14 +173,10 @@
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>
-            Comment on l'utilise ? - Collapse
-          </p>
+          <p>Comment on l'utilise ? - Collapse</p>
         </TabPanel>
         <TabPanel>
-          <p>
-            Ceci est un code
-          </p>
+          <p>Ceci est un code</p>
         </TabPanel>
       </Tabs>
     </div>
@@ -203,14 +197,10 @@
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>
-            Comment on l'utilise ? - Review
-          </p>
+          <p>Comment on l'utilise ? - Review</p>
         </TabPanel>
         <TabPanel>
-          <p>
-            Ceci est un code
-          </p>
+          <p>Ceci est un code</p>
         </TabPanel>
       </Tabs>
     </div>
@@ -233,14 +223,10 @@
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>
-            Comment on l'utilise ? - Tabs
-          </p>
+          <p>Comment on l'utilise ? - Tabs</p>
         </TabPanel>
         <TabPanel>
-          <p>
-            Ceci est un code
-          </p>
+          <p>Ceci est un code</p>
         </TabPanel>
       </Tabs>
     </div>
@@ -282,14 +268,10 @@
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>
-            Comment on l'utilise ? - Calc
-          </p>
+          <p>Comment on l'utilise ? - Calc</p>
         </TabPanel>
         <TabPanel>
-          <p>
-            Ceci est un code
-          </p>
+          <p>Ceci est un code</p>
         </TabPanel>
       </Tabs>
     </div>
@@ -307,14 +289,10 @@
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>
-            Comment on l'utilise ? - ColorPicker
-          </p>
+          <p>Comment on l'utilise ? - ColorPicker</p>
         </TabPanel>
         <TabPanel>
-          <p>
-            Ceci est un code
-          </p>
+          <p>Ceci est un code</p>
         </TabPanel>
       </Tabs>
     </div>
@@ -332,14 +310,10 @@
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>
-            Comment on l'utilise ? - TextInput
-          </p>
+          <p>Comment on l'utilise ? - TextInput</p>
         </TabPanel>
         <TabPanel>
-          <p>
-            Ceci est un code
-          </p>
+          <p>Ceci est un code</p>
         </TabPanel>
       </Tabs>
     </div>
@@ -358,14 +332,10 @@
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>
-            Comment on l'utilise ? - Checkbox
-          </p>
+          <p>Comment on l'utilise ? - Checkbox</p>
         </TabPanel>
         <TabPanel>
-          <p>
-            Ceci est un code
-          </p>
+          <p>Ceci est un code</p>
         </TabPanel>
       </Tabs>
     </div>
@@ -388,14 +358,10 @@
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>
-            Comment on l'utilise ? - ToDo
-          </p>
+          <p>Comment on l'utilise ? - ToDo</p>
         </TabPanel>
         <TabPanel>
-          <p>
-            Ceci est un code
-          </p>
+          <p>Ceci est un code</p>
         </TabPanel>
       </Tabs>
     </div>
@@ -404,12 +370,43 @@
       <Todo />
     </div>
   </div>
+  <div class="displayCompoContain" id="codespace">
+    <div class="text">
+      <h4>CodeSpace</h4>
+      <Tabs>
+        <TabList>
+          <Tab>Utilisation</Tab>
+          <Tab>Code</Tab>
+        </TabList>
+        <TabPanel>
+          <p>Comment on l'utilise ? - ToDo</p>
+        </TabPanel>
+        <TabPanel
+          ><div style="margin: 1em 0">
+            <CodeSpace title={"Code du CodeSpace"}>
+              {'<CodeSpace title={"Ceci est le titre du CodeSpace"}>hello</CodeSpace>'}
+            </CodeSpace>
+          </div>
+        </TabPanel>
+      </Tabs>
+    </div>
+
+    <div class="compoZone">
+      <CodeSpace title={"Ceci est le titre du CodeSpace"}>hello</CodeSpace>
+    </div>
+  </div>
 </section>
 
 <footer>
   <p>{new Date().getFullYear()} - GoofyComponentTeam</p>
   <div>
-    <div><FaLinkedin /></div>
+    <div
+      on:click={() => {
+        linkedinTrigger = !linkedinTrigger;
+      }}
+    >
+      <FaLinkedin />
+    </div>
     <div
       on:click={() => {
         window.open("https://github.com/GoofyComponent/GoofyComponent");
@@ -419,3 +416,15 @@
     </div>
   </div>
 </footer>
+
+{#if linkedinTrigger}
+  <AlertModal
+    btn={false}
+    confirmAction={() => {
+      linkedinTrigger = !linkedinTrigger;
+    }}
+    confirmMsg={"FERMER"}
+    modalTitle={"Nos Linkedin"}
+    modalContent={'<ul><li><a href="https://www.linkedin.com/in/luca-grousset-b9122a1b5/">https://www.linkedin.com/in/luca-grousset-b9122a1b5/</a></li><li><a href="https://www.linkedin.com/in/brandon-vo/">https://www.linkedin.com/in/brandon-vo/</a></li><li><a href="https://www.linkedin.com/in/jeremy-abdoelsomad/">https://www.linkedin.com/in/jeremy-abdoelsomad/</a></li><li><a href="https://www.linkedin.com/in/antoine-ads/">https://www.linkedin.com/in/antoine-ads/</a></li><li><a href="https://www.linkedin.com/in/adrien-albuquerque-213314177/">https://www.linkedin.com/in/adrien-albuquerque-213314177/</a></li></ul>'}
+  />
+{/if}

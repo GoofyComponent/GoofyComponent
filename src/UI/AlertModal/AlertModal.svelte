@@ -4,8 +4,8 @@
   export let rejectMsg = "Annuler";
   export let modalTitle = "Attention !";
   export let modalContent = "L'action effectuée est irréversible.";
-  export let confirmAction;
-  export let rejectAction;
+  export let confirmAction = () => {};
+  export let rejectAction = () => {};
 </script>
 
 <section id="AlertModalContainer">
@@ -15,10 +15,11 @@
         {modalTitle}
       </h1>
 
-      <p class="modalInfos">
-        {modalContent}
-      </p>
+      <div class="modalInfos">
+        {@html modalContent}
+      </div>
     </div>
+
     {#if btn}
       <div class="AlertModalButtons">
         <button
@@ -27,6 +28,15 @@
         >
           {rejectMsg}
         </button>
+        <button
+          class="AlertModalButton"
+          on:click={confirmAction && confirmAction}
+        >
+          {confirmMsg}
+        </button>
+      </div>
+    {:else}
+      <div class="AlertModalButtons flexend">
         <button
           class="AlertModalButton"
           on:click={confirmAction && confirmAction}
@@ -81,6 +91,10 @@
     align-items: center;
     width: 50%;
     align-self: flex-end;
+  }
+
+  .AlertModalButtons.flexend {
+    justify-content: flex-end;
   }
 
   .AlertModalButton {
