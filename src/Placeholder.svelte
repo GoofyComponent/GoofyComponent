@@ -124,7 +124,14 @@
       }}
     >
       <p>CodeSpace</p>
-    </div>
+    </div><div
+    on:click={(e) => {
+      e.preventDefault();
+      document.getElementById("listbox").scrollIntoView();
+    }}
+  >
+    <p>ListBox</p>
+  </div>
   </nav>
 
   <div class="displayCompoContain" id="alertmodal">
@@ -381,6 +388,31 @@
   <div class="displayCompoContain" id="codespace">
     <div class="text">
       <h4>CodeSpace</h4>
+      <Tabs>
+        <TabList>
+          <Tab>Utilisation</Tab>
+          <Tab>Code</Tab>
+        </TabList>
+        <TabPanel>
+          <p>Comment on l'utilise ? - ToDo</p>
+        </TabPanel>
+        <TabPanel
+          ><div style="margin: 1em 0">
+            <CodeSpace title={"Code du CodeSpace"}>
+              {'<CodeSpace title={"Ceci est le titre du CodeSpace"}>hello</CodeSpace>'}
+            </CodeSpace>
+          </div>
+        </TabPanel>
+      </Tabs>
+    </div>
+
+    <div class="compoZone">
+      <CodeSpace title={"Ceci est le titre du CodeSpace"}>hello</CodeSpace>
+    </div>
+  </div>
+  <div class="displayCompoContain" id="listbox">
+    <div class="text">
+      <h4>ListBox</h4>
       <Tabs>
         <TabList>
           <Tab>Utilisation</Tab>
