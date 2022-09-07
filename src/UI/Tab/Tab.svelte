@@ -14,13 +14,15 @@
 		border: none;
 		border-bottom: 2px solid white;
 		border-radius: 0;
-		margin: 0;
+		font-size: 20px;
+		margin-right: 10px;
+		margin-left: 10px;
 		color: #ccc;
 	}
 	
 	.selected {
 		border-bottom: 2px solid rgb(0, 70, 128);;
-		color: #333;
+		color: rgb(128, 128, 128);
 	}
 </style>
 
