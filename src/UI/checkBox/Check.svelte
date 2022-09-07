@@ -1,8 +1,7 @@
 <script>
   export let sentenceA;
   export let sentenceB;
-
-  let yes = false;
+  export let yes = false;
 </script>
 
 <div class="checkBox">
@@ -15,8 +14,6 @@
       {sentenceB}
     {/if}
   </p>
-
-  <button disabled={!yes} class="buttoncheck"> c'est Ok </button>
 </div>
 
 <style>

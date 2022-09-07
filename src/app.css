@@ -185,3 +185,10 @@ footer > div > div:hover {
 .displayCompoContain > .compoZone > .alertModalBtn {
   font-size: 1.4em;
 }
+
+.check {
+  flex-direction: column;
+}
+.inputName {
+  flex-direction: column;
+}
