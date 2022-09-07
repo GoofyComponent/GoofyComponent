@@ -60,6 +60,7 @@
 
     font-family: inherit;
     font-size: 1em;
+    color: white;
   }
 
   .field__input:focus::-webkit-input-placeholder {

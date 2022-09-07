@@ -18,6 +18,7 @@
   let btnTrigger = false;
   let demoColor = "#006BD7";
   let demoInput = "";
+  let checkDemo = false;
 </script>
 
 <section id="linksBar">
@@ -281,7 +282,7 @@
       </p>
     </div>
 
-    <div class="compoZone">
+    <div class="compoZone inputName">
       <InputText placeholder={"entrez votre nom"} bind:name={demoInput} />
       <h3>Hello {demoInput || "Stranger "} !</h3>
     </div>
@@ -298,8 +299,13 @@
       </p>
     </div>
 
-    <div class="compoZone">
-      <Check sentenceA={"Parfait !!!"} sentenceB={"Veuillez cocher la case "} />
+    <div class="compoZone check">
+      <Check
+        sentenceA={"Parfait !!!"}
+        sentenceB={"Veuillez cocher la case "}
+        bind:yes={checkDemo}
+      />
+      <button disabled={!checkDemo} class="buttoncheck"> c'est Ok </button>
     </div>
   </div>
   <div class="displayCompoContain" id="todo">
