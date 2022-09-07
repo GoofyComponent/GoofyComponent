@@ -143,37 +143,43 @@
 
   <div class="displayCompoContain" id="alertmodal">
     <div class="text">
-      <h4>AlertModal</h4>
+      <h4>AlertModal <span class="teamname">- Antoine</span></h4>
       <Tabs>
         <TabList>
           <Tab>Utilisation</Tab>
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
+          <h5 class="titleexplicationprops">Description:</h5>
+          <p class="explicationpropscontent">
+            Affiche une modal en superposition sur le reste de la page. Le
+            titre, le texte peuvent être personnalisés. Des boutons d'action
+            peuvent etre ajoutés, et l'on peux ajouter la fonction voulu.
+          </p>
           <h5 class="titleexplicationprops">Les props:</h5>
-          <h6 class="explicationpropstilte">btn</h6>
+          <h6 class="explicationpropstilte">btn :</h6>
           <p class="explicationpropscontent">
             Booléen - Active ou desactive les boutons de confirmation. Si false,
             laisse uniquement un bouton
           </p>
-          <h6 class="titleexplicationprops">modalTitle</h6>
+          <h6 class="titleexplicationprops">modalTitle :</h6>
           <p class="titleexplicationprops">String - Titre de la modale</p>
-          <h6 class="titleexplicationprops">modalContent</h6>
+          <h6 class="titleexplicationprops">modalContent :</h6>
           <p class="titleexplicationprops">String - Le contenu de la modale</p>
-          <h6 class="titleexplicationprops">ConfirmMsg</h6>
+          <h6 class="titleexplicationprops">ConfirmMsg :</h6>
           <p class="titleexplicationprops">
             String - Le message du bouton de confirmation ou de fermeture
           </p>
-          <h6 class="titleexplicationprops">rejectMsg</h6>
+          <h6 class="titleexplicationprops">rejectMsg :</h6>
           <p class="titleexplicationprops">
             String - Le message du bouton de rejet
           </p>
-          <h6 class="titleexplicationprops">confirmAction</h6>
+          <h6 class="titleexplicationprops">confirmAction :</h6>
           <p class="titleexplicationprops">
             Function - La fonction à executer lors de la confirmation de la
             modale
           </p>
-          <h6 class="titleexplicationprops">rejectAction</h6>
+          <h6 class="titleexplicationprops">rejectAction :</h6>
           <p class="titleexplicationprops">
             Function - La fonction à executer lors du rejet de la modale
           </p>
@@ -244,19 +250,23 @@
   </div>
   <div class="displayCompoContain" id="collapse">
     <div class="text">
-      <h4>Collapse</h4>
+      <h4>Collapse <span class="teamname">- Antoine</span></h4>
       <Tabs>
         <TabList>
           <Tab>Utilisation</Tab>
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
+          <h5 class="titleexplicationprops">Description:</h5>
+          <p class="explicationpropscontent">
+            Permet de placer des bloc de textes qui peuvent être depliés ou non.
+          </p>
           <h5 class="titleexplicationprops">Les props:</h5>
-          <h6 class="explicationpropstilte">sectionName</h6>
+          <h6 class="explicationpropstilte">sectionName :</h6>
           <p class="explicationpropscontent">
             String - Le nom de la section à afficher
           </p>
-          <h6 class="titleexplicationprops">sectionContent</h6>
+          <h6 class="titleexplicationprops">sectionContent :</h6>
           <p class="titleexplicationprops">
             String - Le contenu de la section à afficher
           </p>
@@ -378,17 +388,45 @@
   </div>
   <div class="displayCompoContain" id="color">
     <div class="text">
-      <h4>ColorPicker</h4>
+      <h4>ColorPicker <span class="teamname">- Brandon</span></h4>
       <Tabs>
         <TabList>
           <Tab>Utilisation</Tab>
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>Comment on l'utilise ? - ColorPicker</p>
+          <h5 class="titleexplicationprops">Description:</h5>
+          <p class="explicationpropscontent">
+            Une palette de couleur qui permet de choisir une couleur, d'en
+            afficher la valeur hexadécimal/RGB et de recuperer la valeur
+            hexadécimal en string dans une variable.
+          </p>
+          <h5 class="titleexplicationprops">Les props:</h5>
+          <h6 class="explicationpropstilte">startColor :</h6>
+          <p class="explicationpropscontent">
+            String - La valeur hexadécimale pour la couleur de départ du
+            colorPicker
+          </p>
+          <h6 class="explicationpropstilte">hexaVal :</h6>
+          <p class="explicationpropscontent">
+            String - La variable qui recevra le changement de couleur
+          </p>
         </TabPanel>
         <TabPanel>
-          <p>Ceci est un code</p>
+          <div style="margin: 1em 0">
+            <CodeSpace title={"Code du CodeSpace"}>
+              <pre>
+{`[...]
+let demoColor = "#006BD7";
+let demoInput = "";
+</script>
+[...]
+<div class="compoZone" style={"background-color:" + demoColor}>
+    <Color startColor={demoColor} bind:hexaVal={demoColor} />
+</div>`}
+              </pre>
+            </CodeSpace>
+          </div>
         </TabPanel>
       </Tabs>
     </div>
@@ -468,17 +506,27 @@
   </div>
   <div class="displayCompoContain" id="codespace">
     <div class="text">
-      <h4>CodeSpace</h4>
+      <h4>CodeSpace <span class="teamname">- Antoine</span></h4>
       <Tabs>
         <TabList>
           <Tab>Utilisation</Tab>
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>Comment on l'utilise ? - ToDo</p>
+          <h5 class="titleexplicationprops">Description:</h5>
+          <p class="explicationpropscontent">
+            Affiche un terminal dans un style macOS, il est possible de mettre
+            du code ou tu texte a l'interieur. Il suffit juste d'inserer le
+            contenu dans la balise CodeSpace.
+          </p>
+          <h5 class="titleexplicationprops">Les props:</h5>
+          <h6 class="explicationpropstilte">title :</h6>
+          <p class="explicationpropscontent">
+            String - Le nom du codeSpace à afficher
+          </p>
         </TabPanel>
-        <TabPanel
-          ><div style="margin: 1em 0">
+        <TabPanel>
+          <div style="margin: 1em 0">
             <CodeSpace title={"Code du CodeSpace"}>
               {'<CodeSpace title={"Ceci est le titre du CodeSpace"}>hello</CodeSpace>'}
             </CodeSpace>
@@ -488,7 +536,9 @@
     </div>
 
     <div class="compoZone">
-      <CodeSpace title={"Ceci est le titre du CodeSpace"}>hello</CodeSpace>
+      <CodeSpace title={"Ceci est le titre du CodeSpace"}
+        >hello, ceci est un texte dans un code block</CodeSpace
+      >
     </div>
   </div>
 </section>

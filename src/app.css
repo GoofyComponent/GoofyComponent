@@ -17,6 +17,11 @@ body {
   scroll-behavior: smooth;
 }
 
+pre {
+  margin: 0;
+  padding: 0;
+}
+
 #linksBar {
   position: relative;
   top: 0;
@@ -208,4 +213,10 @@ footer > div > div:hover {
 
 .explicationpropscontent {
   font-size: 0.8em;
+}
+
+.teamname {
+  font-size: 0.6em;
+  font-weight: 500;
+  font-style: italic;
 }

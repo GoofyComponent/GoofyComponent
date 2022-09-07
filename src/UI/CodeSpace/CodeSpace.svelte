@@ -107,25 +107,9 @@
     place-items: center;
   }
 
-  .tabs {
-    display: flex;
-    justify-content: flex-start;
-    place-items: center;
-    border-bottom: solid 1px var(--screen-border-color);
-  }
-
-  .drawer {
-    position: absolute;
-    bottom: 0px;
-    background: var(--screen-background-color);
-    border-top: solid 1px var(--screen-border-color);
-    font-size: 0.9rem;
-    width: 100%;
-    padding: 0.2rem;
-  }
-
   .content {
     padding: 1em;
     overflow: auto;
+    font-size: 0.8em;
   }
 </style>
