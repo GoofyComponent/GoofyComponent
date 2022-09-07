@@ -17,6 +17,7 @@
 
   let btnTrigger = false;
   let demoColor = "#006BD7";
+  let demoInput = "";
 </script>
 
 <section id="linksBar">
@@ -138,8 +139,12 @@
       {#if btnTrigger}
         <AlertModal
           btn={true}
+          modalContent={"Vous avez ouvert la modal., voulez vous la fermer ?"}
+          rejectMsg={"Oui"}
+          confirmMsg={"Oui mais en mieux"}
           confirmAction={() => {
             {
+              alert("Vous avez cliqué mais en mieux");
               btnTrigger = !btnTrigger;
             }
           }}
@@ -167,7 +172,7 @@
     <div class="compoZone">
       <Collapse
         sectionName={"Section 1"}
-        sectionContent={"Section 1 content"}
+        sectionContent={"Ceci est une collapse, le bloc peut être ouvert ou fermé."}
       />
     </div>
   </div>
@@ -277,7 +282,8 @@
     </div>
 
     <div class="compoZone">
-      <InputText placeholder={"entrez votre nom"} />
+      <InputText placeholder={"entrez votre nom"} bind:name={demoInput} />
+      <h3>Hello {demoInput || "Stranger "} !</h3>
     </div>
   </div>
   <div class="displayCompoContain" id="checkbox">

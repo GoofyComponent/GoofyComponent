@@ -1,11 +1,9 @@
 <script>
   export let placeholder;
-  export let value = "";
-  export let disabled = false;
   export let showPlaceholder = true;
 
   let placeholderStyle = "";
-  let name = "";
+  export let name = "";
 
   if (!showPlaceholder) {
     placeholderStyle = "0px auto";
@@ -21,7 +19,6 @@
   <label class="field a-field a-field_a1">
     <input bind:value={name} class="field__input a-field__input" />
   </label>
-  <h3>Hello {name || "Stranger "} !</h3>
 </div>
 
 <style>
