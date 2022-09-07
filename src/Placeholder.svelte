@@ -117,6 +117,14 @@
     >
       <p>ToDo</p>
     </div>
+    <div
+      on:click={(e) => {
+        e.preventDefault();
+        document.getElementById("codespace").scrollIntoView();
+      }}
+    >
+      <p>CodeSpace</p>
+    </div>
   </nav>
 
   <div class="displayCompoContain" id="alertmodal">
