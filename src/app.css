@@ -166,10 +166,13 @@ footer > div > div:hover {
 
 .displayCompoContain > .text {
   width: 40%;
+  height: 35vh;
+  overflow: auto;
 }
 
 .displayCompoContain > .text > h4 {
   font-size: 2em;
+  margin: 0.5em 0;
 }
 
 .displayCompoContain > .compoZone {
@@ -191,4 +194,18 @@ footer > div > div:hover {
 }
 .inputName {
   flex-direction: column;
+}
+
+.titleexplicationprops {
+  font-size: 1em;
+  margin: 0.5em 0;
+}
+
+.explicationpropstilte {
+  font-size: 0.9em;
+  margin: 0.5em 0;
+}
+
+.explicationpropscontent {
+  font-size: 0.8em;
 }

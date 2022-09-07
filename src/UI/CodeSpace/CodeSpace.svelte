@@ -126,5 +126,6 @@
 
   .content {
     padding: 1em;
+    overflow: auto;
   }
 </style>

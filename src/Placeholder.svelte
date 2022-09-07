@@ -21,6 +21,20 @@
   let demoColor = "#006BD7";
   let demoInput = "";
   let checkDemo = false;
+
+  function escapeHtml(text) {
+    var map = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;",
+    };
+
+    return text.replace(/[&<>"']/g, function (m) {
+      return map[m];
+    });
+  }
 </script>
 
 <section id="linksBar">
@@ -124,14 +138,7 @@
       }}
     >
       <p>CodeSpace</p>
-    </div><div
-    on:click={(e) => {
-      e.preventDefault();
-      document.getElementById("listbox").scrollIntoView();
-    }}
-  >
-    <p>ListBox</p>
-  </div>
+    </div>
   </nav>
 
   <div class="displayCompoContain" id="alertmodal">
@@ -143,10 +150,66 @@
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>Comment on l'utilise ? - AlertModal</p>
+          <h5 class="titleexplicationprops">Les props:</h5>
+          <h6 class="explicationpropstilte">btn</h6>
+          <p class="explicationpropscontent">
+            Booléen - Active ou desactive les boutons de confirmation. Si false,
+            laisse uniquement un bouton
+          </p>
+          <h6 class="titleexplicationprops">modalTitle</h6>
+          <p class="titleexplicationprops">String - Titre de la modale</p>
+          <h6 class="titleexplicationprops">modalContent</h6>
+          <p class="titleexplicationprops">String - Le contenu de la modale</p>
+          <h6 class="titleexplicationprops">ConfirmMsg</h6>
+          <p class="titleexplicationprops">
+            String - Le message du bouton de confirmation ou de fermeture
+          </p>
+          <h6 class="titleexplicationprops">rejectMsg</h6>
+          <p class="titleexplicationprops">
+            String - Le message du bouton de rejet
+          </p>
+          <h6 class="titleexplicationprops">confirmAction</h6>
+          <p class="titleexplicationprops">
+            Function - La fonction à executer lors de la confirmation de la
+            modale
+          </p>
+          <h6 class="titleexplicationprops">rejectAction</h6>
+          <p class="titleexplicationprops">
+            Function - La fonction à executer lors du rejet de la modale
+          </p>
         </TabPanel>
         <TabPanel>
-          <p>Ceci est un code</p>
+          <div style="margin: 1em 1em">
+            <CodeSpace title={"Code du AlertModal"}>
+              <!-- Display html tag as text -->
+              <pre>
+{`<button
+    on:click={() => {
+      btnTrigger = !btnTrigger;
+    }}
+    class="alertModalBtn">Cliquez-moi !</button>
+    {#if btnTrigger}
+      <AlertModal
+        btn={true}
+        modalContent={"Vous avez ouvert la modal., voulez vous la fermer ?"}
+        rejectMsg={"Oui"}
+        confirmMsg={"Oui mais en mieux"}
+        confirmAction={() => {
+          {
+            alert("Vous avez cliqué mais en mieux");
+            btnTrigger = !btnTrigger;
+          }
+        }}
+        rejectAction={() => {
+          {
+            btnTrigger = !btnTrigger;
+          }
+        }}
+      />
+    {/if}`}
+              </pre>
+            </CodeSpace>
+          </div>
         </TabPanel>
       </Tabs>
     </div>
@@ -188,10 +251,28 @@
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>Comment on l'utilise ? - Collapse</p>
+          <h5 class="titleexplicationprops">Les props:</h5>
+          <h6 class="explicationpropstilte">sectionName</h6>
+          <p class="explicationpropscontent">
+            String - Le nom de la section à afficher
+          </p>
+          <h6 class="titleexplicationprops">sectionContent</h6>
+          <p class="titleexplicationprops">
+            String - Le contenu de la section à afficher
+          </p>
         </TabPanel>
         <TabPanel>
-          <p>Ceci est un code</p>
+          <div style="margin: 1em 1em">
+            <CodeSpace title={"Code du Collapse"}>
+              <!-- Display html tag as text -->
+              <pre>
+{`<Collapse
+    sectionName={"Section 1"}
+    sectionContent={"Ceci est une collapse, le bloc peut être ouvert ou fermé."}
+  />`}
+              </pre>
+            </CodeSpace>
+          </div>
         </TabPanel>
       </Tabs>
     </div>
@@ -388,31 +469,6 @@
   <div class="displayCompoContain" id="codespace">
     <div class="text">
       <h4>CodeSpace</h4>
-      <Tabs>
-        <TabList>
-          <Tab>Utilisation</Tab>
-          <Tab>Code</Tab>
-        </TabList>
-        <TabPanel>
-          <p>Comment on l'utilise ? - ToDo</p>
-        </TabPanel>
-        <TabPanel
-          ><div style="margin: 1em 0">
-            <CodeSpace title={"Code du CodeSpace"}>
-              {'<CodeSpace title={"Ceci est le titre du CodeSpace"}>hello</CodeSpace>'}
-            </CodeSpace>
-          </div>
-        </TabPanel>
-      </Tabs>
-    </div>
-
-    <div class="compoZone">
-      <CodeSpace title={"Ceci est le titre du CodeSpace"}>hello</CodeSpace>
-    </div>
-  </div>
-  <div class="displayCompoContain" id="listbox">
-    <div class="text">
-      <h4>ListBox</h4>
       <Tabs>
         <TabList>
           <Tab>Utilisation</Tab>
