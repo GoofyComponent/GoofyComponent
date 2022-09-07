@@ -119,14 +119,22 @@
   <div class="displayCompoContain" id="alertmodal">
     <div class="text">
       <h4>AlertModal</h4>
-      <p>Utilisation</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-        atque error, quos corrupti enim qui deserunt veniam perferendis
-        exercitationem sint asperiores, blanditiis accusantium iusto saepe
-        repudiandae eaque officia dicta itaque.
-      </p>
-      <p>Antoine</p>
+      <Tabs>
+        <TabList>
+          <Tab>Utilisation</Tab>
+          <Tab>Code</Tab>
+        </TabList>
+        <TabPanel>
+          <p>
+            Comment on l'utilise ? - AlertModal
+          </p>
+        </TabPanel>
+        <TabPanel>
+          <p>
+            Ceci est un code
+          </p>
+        </TabPanel>
+      </Tabs>
     </div>
 
     <div class="compoZone">
@@ -160,13 +168,22 @@
   <div class="displayCompoContain" id="collapse">
     <div class="text">
       <h4>Collapse</h4>
-      <p>Utilisation</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-        atque error, quos corrupti enim qui deserunt veniam perferendis
-        exercitationem sint asperiores, blanditiis accusantium iusto saepe
-        repudiandae eaque officia dicta itaque.
-      </p>
+      <Tabs>
+        <TabList>
+          <Tab>Utilisation</Tab>
+          <Tab>Code</Tab>
+        </TabList>
+        <TabPanel>
+          <p>
+            Comment on l'utilise ? - Collapse
+          </p>
+        </TabPanel>
+        <TabPanel>
+          <p>
+            Ceci est un code
+          </p>
+        </TabPanel>
+      </Tabs>
     </div>
 
     <div class="compoZone">
@@ -179,13 +196,22 @@
   <div class="displayCompoContain" id="review">
     <div class="text">
       <h4>Review</h4>
-      <p>Utilisation</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-        atque error, quos corrupti enim qui deserunt veniam perferendis
-        exercitationem sint asperiores, blanditiis accusantium iusto saepe
-        repudiandae eaque officia dicta itaque.
-      </p>
+      <Tabs>
+        <TabList>
+          <Tab>Utilisation</Tab>
+          <Tab>Code</Tab>
+        </TabList>
+        <TabPanel>
+          <p>
+            Comment on l'utilise ? - Review
+          </p>
+        </TabPanel>
+        <TabPanel>
+          <p>
+            Ceci est un code
+          </p>
+        </TabPanel>
+      </Tabs>
     </div>
 
     <div class="compoZone">
@@ -200,13 +226,22 @@
   <div class="displayCompoContain" id="tabs">
     <div class="text">
       <h4>Tabs</h4>
-      <p>Utilisation</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-        atque error, quos corrupti enim qui deserunt veniam perferendis
-        exercitationem sint asperiores, blanditiis accusantium iusto saepe
-        repudiandae eaque officia dicta itaque.
-      </p>
+      <Tabs>
+        <TabList>
+          <Tab>Utilisation</Tab>
+          <Tab>Code</Tab>
+        </TabList>
+        <TabPanel>
+          <p>
+            Comment on l'utilise ? - Tabs
+          </p>
+        </TabPanel>
+        <TabPanel>
+          <p>
+            Ceci est un code
+          </p>
+        </TabPanel>
+      </Tabs>
     </div>
 
     <div class="compoZone">
@@ -240,13 +275,22 @@
   <div class="displayCompoContain" id="calc">
     <div class="text">
       <h4>Calc</h4>
-      <p>Utilisation</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-        atque error, quos corrupti enim qui deserunt veniam perferendis
-        exercitationem sint asperiores, blanditiis accusantium iusto saepe
-        repudiandae eaque officia dicta itaque.
-      </p>
+      <Tabs>
+        <TabList>
+          <Tab>Utilisation</Tab>
+          <Tab>Code</Tab>
+        </TabList>
+        <TabPanel>
+          <p>
+            Comment on l'utilise ? - Calc
+          </p>
+        </TabPanel>
+        <TabPanel>
+          <p>
+            Ceci est un code
+          </p>
+        </TabPanel>
+      </Tabs>
     </div>
 
     <div class="compoZone">
@@ -256,13 +300,22 @@
   <div class="displayCompoContain" id="color">
     <div class="text">
       <h4>ColorPicker</h4>
-      <p>Utilisation</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-        atque error, quos corrupti enim qui deserunt veniam perferendis
-        exercitationem sint asperiores, blanditiis accusantium iusto saepe
-        repudiandae eaque officia dicta itaque.
-      </p>
+      <Tabs>
+        <TabList>
+          <Tab>Utilisation</Tab>
+          <Tab>Code</Tab>
+        </TabList>
+        <TabPanel>
+          <p>
+            Comment on l'utilise ? - ColorPicker
+          </p>
+        </TabPanel>
+        <TabPanel>
+          <p>
+            Ceci est un code
+          </p>
+        </TabPanel>
+      </Tabs>
     </div>
 
     <div class="compoZone" style={"background-color:" + demoColor}>
@@ -271,14 +324,23 @@
   </div>
   <div class="displayCompoContain" id="textinput">
     <div class="text">
-      <h4>Text Input</h4>
-      <p>Utilisation</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-        atque error, quos corrupti enim qui deserunt veniam perferendis
-        exercitationem sint asperiores, blanditiis accusantium iusto saepe
-        repudiandae eaque officia dicta itaque.
-      </p>
+      <h4>TextInput</h4>
+      <Tabs>
+        <TabList>
+          <Tab>Utilisation</Tab>
+          <Tab>Code</Tab>
+        </TabList>
+        <TabPanel>
+          <p>
+            Comment on l'utilise ? - TextInput
+          </p>
+        </TabPanel>
+        <TabPanel>
+          <p>
+            Ceci est un code
+          </p>
+        </TabPanel>
+      </Tabs>
     </div>
 
     <div class="compoZone">
@@ -289,13 +351,22 @@
   <div class="displayCompoContain" id="checkbox">
     <div class="text">
       <h4>Checkbox</h4>
-      <p>Utilisation</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-        atque error, quos corrupti enim qui deserunt veniam perferendis
-        exercitationem sint asperiores, blanditiis accusantium iusto saepe
-        repudiandae eaque officia dicta itaque.
-      </p>
+      <Tabs>
+        <TabList>
+          <Tab>Utilisation</Tab>
+          <Tab>Code</Tab>
+        </TabList>
+        <TabPanel>
+          <p>
+            Comment on l'utilise ? - Checkbox
+          </p>
+        </TabPanel>
+        <TabPanel>
+          <p>
+            Ceci est un code
+          </p>
+        </TabPanel>
+      </Tabs>
     </div>
 
     <div class="compoZone">
@@ -305,13 +376,22 @@
   <div class="displayCompoContain" id="todo">
     <div class="text">
       <h4>ToDo</h4>
-      <p>Utilisation</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-        atque error, quos corrupti enim qui deserunt veniam perferendis
-        exercitationem sint asperiores, blanditiis accusantium iusto saepe
-        repudiandae eaque officia dicta itaque.
-      </p>
+      <Tabs>
+        <TabList>
+          <Tab>Utilisation</Tab>
+          <Tab>Code</Tab>
+        </TabList>
+        <TabPanel>
+          <p>
+            Comment on l'utilise ? - ToDo
+          </p>
+        </TabPanel>
+        <TabPanel>
+          <p>
+            Ceci est un code
+          </p>
+        </TabPanel>
+      </Tabs>
     </div>
 
     <div class="compoZone">
