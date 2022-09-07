@@ -1,11 +1,11 @@
 <script lang="ts">
 	const shows = [
-		{ id: 1, name: 'Cowboy Bebop', completed: false },
-		{ id: 2, name: 'Naruto', completed: false },
-		{ id: 3, name: 'One Piece', completed: false },
-		{ id: 4, name: 'Fullmetal Alchemist', completed: true },
-		{ id: 5, name: 'One Punch Man', completed: true },
-		{ id: 6, name: 'Death Note', completed: true }
+		{ id: 1, name: 'Titanic', completed: false },
+		{ id: 2, name: 'Dirty Dancing', completed: false },
+		{ id: 3, name: 'Pulp fiction', completed: true },
+		{ id: 4, name: 'Forrest gamp', completed: true },
+		{ id: 5, name: 'Le roi lion', completed:  },
+		{ id: 6, name: 'Jurassic Park', completed: true }
 	]
 
 	let selected = shows[0].name
