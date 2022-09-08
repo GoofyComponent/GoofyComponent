@@ -352,7 +352,7 @@ comments={"Le Restaurant sert un très bon Ricard. Le service est très bon. Le 
   </div>
   <div class="displayCompoContain" id="tabs">
     <div class="text">
-      <h4>Tabs</h4>
+      <h4>Tabs <span class="teamname">- Brandon</span></h4>
       <Tabs>
         <TabList>
           <Tab>Utilisation</Tab>
