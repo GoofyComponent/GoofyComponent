@@ -359,10 +359,43 @@ comments={"Le Restaurant sert un très bon Ricard. Le service est très bon. Le 
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>Comment on l'utilise ? - Tabs</p>
+          <h5 class="titleexplicationprops">Description:</h5>
+          <p class="explicationpropscontent">
+            Permet de faire les différents tableau avec des onglets.
+          </p>
         </TabPanel>
         <TabPanel>
-          <p>Ceci est un code</p>
+          <div style="margin: 1em 0">
+            <CodeSpace title={"Code du CodeSpace"}>
+              <pre>
+{`<Tabs>
+    <TabList>
+      <Tab>Nouveau vlog au japon</Tab>
+      <Tab>Le dernier VLOG + Video</Tab>
+    </TabList>
+      <TabPanel>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptates, quae, quod, voluptas quibusdam voluptatibus quidem
+          voluptatum quos quia quas quod. Quisquam, quae. Quisquam, quae.
+          Quisquam, quae. Quisquam, quae.
+        </p>
+      </TabPanel>
+      <TabPanel>
+        <p>C'est mon dernier vlog</p>
+        <iframe
+          width="300"
+          height="200"
+          src="https://www.youtube.com/embed/hseE17LTYfc?start=60"
+          title="JAPON"
+          frameborder="0"
+          allowfullscreen
+        />
+      </TabPanel>
+  </Tabs>`}
+              </pre>
+            </CodeSpace>
+          </div>
         </TabPanel>
       </Tabs>
     </div>
