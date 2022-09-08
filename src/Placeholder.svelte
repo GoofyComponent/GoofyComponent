@@ -296,17 +296,47 @@
   </div>
   <div class="displayCompoContain" id="review">
     <div class="text">
-      <h4>Review</h4>
+      <h4>Review<span class="teamname">- Adrien</span></h4>
       <Tabs>
         <TabList>
           <Tab>Utilisation</Tab>
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>Comment on l'utilise ? - Review</p>
+          <h5 class="titleexplicationprops">Description:</h5>
+          <p class="explicationpropscontent">
+            Permet d'afficher une review avec un nom, une note et un
+            commentaire.
+          </p>
+          <h5 class="titleexplicationprops">Les props:</h5>
+          <h6 class="explicationpropstilte">name :</h6>
+          <p class="explicationpropscontent">
+            String - Le nom de la personne qui a fait la review
+          </p>
+          <h6 class="explicationpropstilte">rating:</h6>
+          <p class="explicationpropscontent">
+            String - La variable qui contient la note de la review
+          </p>
+          <h6 class="explicationpropstilte">src:</h6>
+          <p class="explicationpropscontent">
+            String - La variable qui contient le lien de l'image de la review
+          </p>
+          <h6 class="explicationpropstilte">comments:</h6>
+          <p class="explicationpropscontent">
+            String - La variable qui contient le commentaire de la review
+          </p>
         </TabPanel>
         <TabPanel>
-          <p>Ceci est un code</p>
+          <CodeSpace title={"Code de la review"}>
+            <pre>
+{`<Review
+name={"Jean-Louis"}
+rating={4}
+src="/Louis.jpeg"
+comments={"Le Restaurant sert un très bon Ricard. Le service est très bon. Le cadre est très bon. Le prix est très bon. Et la serveuse..."}
+/>`}
+            </pre>
+          </CodeSpace>
         </TabPanel>
       </Tabs>
     </div>
@@ -367,17 +397,24 @@
   </div>
   <div class="displayCompoContain" id="calc">
     <div class="text">
-      <h4>Calc</h4>
+      <h4>Calc<span class="teamname">- Adrien</span></h4>
       <Tabs>
         <TabList>
           <Tab>Utilisation</Tab>
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>Comment on l'utilise ? - Calc</p>
+          <h5 class="titleexplicationprops">Description:</h5>
+          <p class="explicationpropscontent">
+            Permet d'afficher une calculatrice
+          </p>
         </TabPanel>
         <TabPanel>
-          <p>Ceci est un code</p>
+          <CodeSpace title={"Code de la calculatrice"}>
+            <pre>
+              {`<Calc />`}
+            </pre>
+          </CodeSpace>
         </TabPanel>
       </Tabs>
     </div>
