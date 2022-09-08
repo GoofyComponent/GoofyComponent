@@ -129,7 +129,7 @@
         document.getElementById("todo").scrollIntoView();
       }}
     >
-      <p>ToDo</p>
+      <p>ToDo - Jérémy</p>
     </div>
     <div
       on:click={(e) => {
@@ -522,17 +522,30 @@ let demoInput = "";
   </div>
   <div class="displayCompoContain" id="todo">
     <div class="text">
-      <h4>ToDo</h4>
+      <h4>ToDo<span class="teamname"> - Jérémy</span></h4>
       <Tabs>
         <TabList>
           <Tab>Utilisation</Tab>
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>Comment on l'utilise ? - ToDo</p>
+          <h5 class="titleexplicationprops">Description:</h5>
+          <p class="explicationpropscontent">
+            Fenêtre oú il est possible d'ajouter ce que l'on veut (liste de courses, todo-list)
+            avec le boutton ajouter,après avoir ajouté ce que l'on veut le mot s'affiche
+            et quand l'activité est effectué il est possible de la cochet ou de l'effacer.
+            Possibilité de voir ce qui est completé et en cours.
+          </p>
+          <h5 class="titleexplicationprops">Les props:</h5>
+          <p class="explicationpropscontent">
+
         </TabPanel>
         <TabPanel>
-          <p>Ceci est un code</p>
+          <div style="margin: 1em 0">
+            <CodeSpace title={"Code de la Todo"}>
+              {'<button on:click={addTask}> Ajouter </button>'}
+            </CodeSpace>
+          </div>
         </TabPanel>
       </Tabs>
     </div>
@@ -553,7 +566,7 @@ let demoInput = "";
           <h5 class="titleexplicationprops">Description:</h5>
           <p class="explicationpropscontent">
             Affiche un terminal dans un style macOS, il est possible de mettre
-            du code ou tu texte a l'interieur. Il suffit juste d'inserer le
+            du code ou du texte a l'interieur. Il suffit juste d'inserer le
             contenu dans la balise CodeSpace.
           </p>
           <h5 class="titleexplicationprops">Les props:</h5>
