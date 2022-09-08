@@ -419,7 +419,7 @@ comments={"Le Restaurant sert un très bon Ricard. Le service est très bon. Le 
           <iframe
           width="920"
           height="550"
-          src="../public/DOGGO.jpg"
+          src="/DOGGO.jpg"
           title="DOGGO"
           frameborder="0"
           />
