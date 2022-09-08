@@ -507,7 +507,7 @@ let demoInput = "";
   </div>
   <div class="displayCompoContain" id="textinput">
     <div class="text">
-      <h4>TextInput</h4>
+      <h4>TextInput <span class="teamname"> - Luca</span></h4>
       <Tabs>
         <TabList>
           <Tab>Utilisation</Tab>
@@ -566,7 +566,7 @@ let demoInput = "";
   </div>
   <div class="displayCompoContain" id="checkbox">
     <div class="text">
-      <h4>Checkbox</h4>
+      <h4>Checkbox <span class="teamname"> - Luca</span></h4>
       <Tabs>
         <TabList>
           <Tab>Utilisation</Tab>
@@ -640,19 +640,19 @@ let demoInput = "";
         <TabPanel>
           <h5 class="titleexplicationprops">Description:</h5>
           <p class="explicationpropscontent">
-            Fenêtre oú il est possible d'ajouter ce que l'on veut (liste de courses, todo-list)
-            avec le boutton ajouter,après avoir ajouté ce que l'on veut le mot s'affiche
-            et quand l'activité est effectué il est possible de la cochet ou de l'effacer.
-            Possibilité de voir ce qui est completé et en cours.
+            Fenêtre oú il est possible d'ajouter ce que l'on veut (liste de
+            courses, todo-list) avec le boutton ajouter,après avoir ajouté ce
+            que l'on veut le mot s'affiche et quand l'activité est effectué il
+            est possible de la cochet ou de l'effacer. Possibilité de voir ce
+            qui est completé et en cours.
           </p>
           <h5 class="titleexplicationprops">Les props:</h5>
-          <p class="explicationpropscontent">
-
-        </TabPanel>
+          <p class="explicationpropscontent" /></TabPanel
+        >
         <TabPanel>
           <div style="margin: 1em 0">
             <CodeSpace title={"Code de la Todo"}>
-              {'<button on:click={addTask}> Ajouter </button>'}
+              {"<button on:click={addTask}> Ajouter </button>"}
             </CodeSpace>
           </div>
         </TabPanel>
