@@ -404,6 +404,7 @@ comments={"Le Restaurant sert un très bon Ricard. Le service est très bon. Le 
       <Tabs>
         <TabList>
           <Tab>Nouveau vlog au japon</Tab>
+          <Tab>El Doggo</Tab>
           <Tab>Le dernier VLOG + Video</Tab>
         </TabList>
         <TabPanel>
@@ -413,6 +414,15 @@ comments={"Le Restaurant sert un très bon Ricard. Le service est très bon. Le 
             voluptatum quos quia quas quod. Quisquam, quae. Quisquam, quae.
             Quisquam, quae. Quisquam, quae.
           </p>
+        </TabPanel>
+        <TabPanel>
+          <iframe
+          width="920"
+          height="550"
+          src="../public/DOGGO.jpg"
+          title="DOGGO"
+          frameborder="0"
+          />
         </TabPanel>
         <TabPanel>
           <p>C'est mon dernier vlog</p>
