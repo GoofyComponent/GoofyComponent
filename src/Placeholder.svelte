@@ -444,10 +444,47 @@ let demoInput = "";
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>Comment on l'utilise ? - TextInput</p>
+          <h5 class="titleexplicationprops">Description:</h5>
+          <p class="explicationpropscontent">Un input Text.</p>
+          <h5 class="titleexplicationprops">Les props:</h5>
+          <h6 class="explicationpropstilte">name :</h6>
+          <p class="explicationpropscontent">
+            String - La valeur entrée dans l'input.
+          </p>
+          <h6 class="explicationpropstilte">placeholder :</h6>
+          <p class="explicationpropscontent">
+            String - La variable qui affichera le placeholder.
+          </p>
         </TabPanel>
         <TabPanel>
-          <p>Ceci est un code</p>
+          <div style="margin: 1em 0">
+            <CodeSpace title={"Code du CodeSpace"}>
+              <pre>
+{`[...]
+  export let placeholder;
+  export let showPlaceholder = true;
+
+  let placeholderStyle = "";
+  export let name = "";
+
+  if (!showPlaceholder) {
+    placeholderStyle = "0px auto";
+  } else {
+    placeholderStyle = "15px auto";
+  }
+</script>
+[...]
+<div class="q-input" style="grid-template-rows: {placeholderStyle};">
+  {#if showPlaceholder}
+    <span class="title">{placeholder}</span>
+  {/if}
+  <label class="field a-field a-field_a1">
+    <input bind:value={name} class="field__input a-field__input" />
+  </label>
+</div>`}
+              </pre>
+            </CodeSpace>
+          </div>
         </TabPanel>
       </Tabs>
     </div>
@@ -466,10 +503,49 @@ let demoInput = "";
           <Tab>Code</Tab>
         </TabList>
         <TabPanel>
-          <p>Comment on l'utilise ? - Checkbox</p>
+          <h5 class="titleexplicationprops">Description:</h5>
+          <p class="explicationpropscontent">
+            Un bouton qui demande une validation.
+          </p>
+          <h5 class="titleexplicationprops">Les props:</h5>
+          <h6 class="explicationpropstilte">sentenceA :</h6>
+          <p class="explicationpropscontent">
+            String - La valeur de la phrase 1.
+          </p>
+          <h6 class="explicationpropstilte">sentenceB :</h6>
+          <p class="explicationpropscontent">
+            String - La valeur de la phrase 2.
+          </p>
+          <h6 class="explicationpropstilte">yes :</h6>
+          <p class="explicationpropscontent">
+            Booléen - la valeur qui active ou non le bouton en fonction de la
+            checkBox.
+          </p>
         </TabPanel>
         <TabPanel>
-          <p>Ceci est un code</p>
+          <div style="margin: 1em 0">
+            <CodeSpace title={"Code du CodeSpace"}>
+              <pre>
+{`[...]
+  export let sentenceA;
+  export let sentenceB;
+  export let yes = false;
+</script>
+[...]
+<div class="checkBox">
+  <input type="checkbox" class="check" bind:checked={yes} />
+
+  <p>
+    {#if yes}
+      {sentenceA}
+    {:else}
+      {sentenceB}
+    {/if}
+  </p>
+</div>`}
+              </pre>
+            </CodeSpace>
+          </div>
         </TabPanel>
       </Tabs>
     </div>
